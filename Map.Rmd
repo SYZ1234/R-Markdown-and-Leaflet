@@ -1,0 +1,28 @@
+---
+title: "R Markdown and Leaflet Project"
+author: "SYZ"
+date: "7/4/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Create a map
+```{r}
+library(leaflet)
+my_map <- leaflet() %>% 
+  addTiles()
+my_map
+```
+
+## Add markers
+```{r}
+my_map <- my_map %>%
+  addMarkers(lat=1.3483, lng=103.6831, 
+             popup="Nanyang Technological University")
+my_map
+```
+
+
